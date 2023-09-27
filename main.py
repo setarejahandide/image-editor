@@ -11,12 +11,13 @@ board = [
 ]
 
 def find_empty(bo):
-    for i in bo:
-        for j in i:
-            if j==0:
+    for i in range(len(bo)):
+        for j in range(len(bo)):
+            if bo[i][j]==0:
                 import random
                 new_number=random.randint(1,9)
-                bo[i][j]
+                bo[i][j]=new_number
+                #check_the_board
     
 
 find_empty(board)
