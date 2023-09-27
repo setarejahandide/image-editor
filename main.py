@@ -1,5 +1,25 @@
-import matplotlib.pyplot as plt
-x=[1,2,3]
-y=[2,4,6]
-plt.plot(x,y)
-plt.show()
+board = [
+    [7,8,0,4,0,0,1,2,0],
+    [6,0,0,0,7,5,0,0,9],
+    [0,0,0,6,0,1,0,7,8],
+    [0,0,7,0,4,0,2,6,0],
+    [0,0,1,0,5,0,9,3,0],
+    [9,0,4,0,6,0,0,0,5],
+    [0,7,0,3,0,0,0,1,2],
+    [1,2,0,0,0,7,4,0,0],
+    [0,4,9,2,0,6,0,0,7]
+]
+
+def find_empty(bo):
+    for i in bo:
+        for j in i:
+            if j==0:
+                import random
+                new_number=random.randint(1,9)
+                bo[i][j]
+    
+
+find_empty(board)
+print(board)
+
+
