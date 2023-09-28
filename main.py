@@ -16,8 +16,27 @@ def find_empty(bo):
             if bo[i][j]==0:
                 import random
                 new_number=random.randint(1,9)
-                bo[i][j]=new_number
+                #bo[i][j]=new_number
+                row=i
+                column=j
                 #check_the_board
+                for i in bo[row]:
+                    if i==new_number:
+                        valid='no'
+                        #bo[row][column]=0
+                    else:
+                        valid='yes'
+
+    
+                if valid=='yes':
+                    for i in range(len(bo)):
+                        if bo[i][column]==new_number:
+                            valid='no'
+                        else:
+                            valid='yes'
+                if valid=='yes':
+                    bo[row][column]=new_number
+                        
     
 
 find_empty(board)
